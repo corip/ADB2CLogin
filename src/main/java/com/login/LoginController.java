@@ -55,6 +55,7 @@ public class LoginController {
             response.setDisplayName("Pedro");
             response.setGivenName("pcoria");
             response.setSurname("Cori");
+            response.setUserPrincipalName("pcori");
             return new ResponseEntity<>(response, HttpStatus.OK);
         }else{
             response.setIsValidUser(false);

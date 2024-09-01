@@ -9,6 +9,8 @@ public class ResponseValidateUser {
     private String givenName;
     private String surname;
 
+    private String userPrincipalName;
+
     public boolean getIsValidUser() {
         return isValidUser;
     }
@@ -39,5 +41,13 @@ public class ResponseValidateUser {
 
     public void setSurname(String surname) {
         this.surname = surname;
+    }
+
+    public String getUserPrincipalName() {
+        return userPrincipalName;
+    }
+
+    public void setUserPrincipalName(String userPrincipalName) {
+        this.userPrincipalName = userPrincipalName;
     }
 }
