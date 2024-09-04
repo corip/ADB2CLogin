@@ -49,7 +49,7 @@ public class LoginController {
 
         logger.debug("/validateUser");
         logger.debug(request.toString());
-        if(request.getEmail().equalsIgnoreCase("pepe@gmail.com")){
+        if(user.contains(request.getEmail())){
 
             response.setIsValidUser(true);
             response.setDisplayName("Pedro");
