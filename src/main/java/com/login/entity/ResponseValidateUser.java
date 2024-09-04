@@ -11,6 +11,8 @@ public class ResponseValidateUser {
 
     private String userPrincipalName;
 
+    private String objectId;
+
     public boolean getIsValidUser() {
         return isValidUser;
     }
@@ -49,5 +51,13 @@ public class ResponseValidateUser {
 
     public void setUserPrincipalName(String userPrincipalName) {
         this.userPrincipalName = userPrincipalName;
+    }
+
+    public String getObjectId() {
+        return objectId;
+    }
+
+    public void setObjectId(String objectId) {
+        this.objectId = objectId;
     }
 }

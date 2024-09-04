@@ -56,6 +56,7 @@ public class LoginController {
             response.setGivenName("pcoria");
             response.setSurname("Cori");
             response.setUserPrincipalName("pcori");
+            response.setObjectId("12345");
             return new ResponseEntity<>(response, HttpStatus.OK);
         }else{
             response.setIsValidUser(false);
