@@ -8,6 +8,7 @@ public class ResponseValidateUser {
     private String displayName;
     private String givenName;
     private String surname;
+    private String role;
 
     private String userPrincipalName;
 
@@ -59,5 +60,13 @@ public class ResponseValidateUser {
 
     public void setObjectId(String objectId) {
         this.objectId = objectId;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }

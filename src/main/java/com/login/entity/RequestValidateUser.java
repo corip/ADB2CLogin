@@ -8,6 +8,8 @@ public class RequestValidateUser {
     private String email;
 
 
+
+
     public String getSignInName() {
         return signInName;
     }
@@ -31,4 +33,6 @@ public class RequestValidateUser {
     public void setEmail(String email) {
         this.email = email;
     }
+
+
 }
