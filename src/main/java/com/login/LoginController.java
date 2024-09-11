@@ -57,7 +57,7 @@ public class LoginController {
             response.setSurname("Cori");
             response.setUserPrincipalName("pcori");
             response.setObjectId("12345");
-            response.setRole("firmante")
+            response.setRole("firmante");
             return new ResponseEntity<>(response, HttpStatus.OK);
         }else{
             response.setIsValidUser(false);
