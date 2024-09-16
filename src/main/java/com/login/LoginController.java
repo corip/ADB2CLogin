@@ -64,6 +64,8 @@ public class LoginController {
             responseError.setVersion("1.0.1");
             responseError.setStatus(409);
             responseError.setUserMessage("Contraseña o password invalida");
+            responseError.setCount(2);
+            responseError.setDetail("Usuario bloqueado");
             return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
         }
 

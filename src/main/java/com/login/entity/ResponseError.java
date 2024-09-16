@@ -6,6 +6,8 @@ public class ResponseError {
     private int status;
 
     private String userMessage;
+    private String detail;
+    private int count;
 
     public String getVersion() {
         return version;
@@ -29,5 +31,21 @@ public class ResponseError {
 
     public void setUserMessage(String userMessage) {
         this.userMessage = userMessage;
+    }
+
+    public String getDetail() {
+        return detail;
+    }
+
+    public void setDetail(String detail) {
+        this.detail = detail;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
     }
 }
