@@ -70,26 +70,26 @@ public class LoginController {
                 response.setIsValidUser(false);
                 responseError.setVersion("1.0.0");
                 responseError.setStatus(400);
-                responseError.setUserMessage("2 intentos");
+                responseError.setUserMessage("status:error,type:two_tries"); // 2 intentos
                 responseError.setCount(2);
-                responseError.setDetail("Usuario bloqueado");
 
-                return new ResponseEntity<>(responseError, HttpStatus.BAD_REQUEST);  // 2 intentos
+
+
             }else if(username.equals("pepe")) {
                 responseError.setVersion("1.0.0");
-                responseError.setUserMessage("1 intento");
+                responseError.setUserMessage("status:error,type:one_try");// 1 intento
                 responseError.setStatus(401);
                 response.setIsValidUser(false);
-                return new ResponseEntity<>(responseError, HttpStatus.UNAUTHORIZED); // 1 intento
+
             }else{
                 response.setIsValidUser(false);
                 responseError.setVersion("1.0.0");
                 responseError.setStatus(402);
-                responseError.setUserMessage("usuario bloqueado");
-                return new ResponseEntity<>(responseError, HttpStatus.PAYMENT_REQUIRED); // usuario bloqueado
+                responseError.setUserMessage("status:error,type:user_blocked");// usuario bloqueado
+
             }
 
-
+            return new ResponseEntity<>(responseError, HttpStatus.UNAUTHORIZED);
 
         }
 
