@@ -45,11 +45,13 @@ public class LoginController {
     private ResponseEntity validateUser(@RequestBody RequestValidateUser request){
         ResponseValidateUser response= new ResponseValidateUser();
         ResponseError responseError = new ResponseError();
-        List<String> user = Arrays.asList("coripedro3@gmail.com","pca1510@hotmail.com","pepe@gmail.com");
+        List<String> usersLs = Arrays.asList("vsantino","pepe","user1");
+        String username= request.getEmail();
+        String password =  request.getPassword();
 
         logger.debug("/validateUser");
         logger.debug(request.toString());
-        if(user.contains(request.getEmail())){
+        if(usersLs.contains(username) && password.equals("1234")){
 
             response.setIsValidUser(true);
             response.setDisplayName("Pedro");
@@ -60,13 +62,24 @@ public class LoginController {
             response.setRole("firmante");
             return new ResponseEntity<>(response, HttpStatus.OK);
         }else{
-            response.setIsValidUser(false);
-            responseError.setVersion("1.0.1");
-            responseError.setStatus(409);
-            responseError.setUserMessage("Contraseña o password invalida");
-            responseError.setCount(2);
-            responseError.setDetail("Usuario bloqueado");
-            return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+            if(username.equals("vsantino")){
+                response.setIsValidUser(false);
+                responseError.setVersion("1.0.1");
+                responseError.setStatus(409);
+                responseError.setUserMessage("Contraseña o password invalida");
+                responseError.setCount(2);
+                responseError.setDetail("Usuario bloqueado");
+                return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);  // 2 intentos
+            }else if(username.equals("pepe")) {
+                response.setIsValidUser(false);
+                return new ResponseEntity<>(response, HttpStatus.UNAUTHORIZED); // 1 intento
+            }else{
+                response.setIsValidUser(false);
+                return new ResponseEntity<>(response, HttpStatus.PAYMENT_REQUIRED); // usuario bloqueado
+            }
+
+
+
         }
 
 
