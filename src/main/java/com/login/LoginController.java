@@ -89,7 +89,7 @@ public class LoginController {
 
             }
 
-            return new ResponseEntity<>(responseError, HttpStatus.UNAUTHORIZED);
+            return new ResponseEntity<>(responseError, HttpStatus.BAD_REQUEST);
 
         }
 
