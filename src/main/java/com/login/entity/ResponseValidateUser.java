@@ -14,6 +14,8 @@ public class ResponseValidateUser {
 
     private String objectId;
 
+    private String firstLogin;
+
     public boolean getIsValidUser() {
         return isValidUser;
     }
@@ -68,5 +70,13 @@ public class ResponseValidateUser {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public String getFirstLogin() {
+        return firstLogin;
+    }
+
+    public void setFirstLogin(String firstLogin) {
+        this.firstLogin = firstLogin;
     }
 }

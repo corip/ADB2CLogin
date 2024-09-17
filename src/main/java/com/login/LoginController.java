@@ -45,7 +45,7 @@ public class LoginController {
     private ResponseEntity validateUser(@RequestBody RequestValidateUser request){
         ResponseValidateUser response= new ResponseValidateUser();
         ResponseError responseError = new ResponseError();
-        List<String> usersLs = Arrays.asList("vsantino","pepe","user1");
+        List<String> usersLs = Arrays.asList("vsantino","pepe","user1","ecordero");
         String username= request.getEmail();
         String password =  request.getPassword();
 
@@ -60,6 +60,10 @@ public class LoginController {
             response.setUserPrincipalName("pcori");
             response.setObjectId("12345");
             response.setRole("firmante");
+            response.setFirstLogin("0");
+            if(username.equals("ecordero")){
+                response.setFirstLogin("1");
+            }
             return new ResponseEntity<>(response, HttpStatus.OK);
         }else{
             if(username.equals("vsantino")){
@@ -73,7 +77,7 @@ public class LoginController {
                 return new ResponseEntity<>(responseError, HttpStatus.BAD_REQUEST);  // 2 intentos
             }else if(username.equals("pepe")) {
                 responseError.setVersion("1.0.0");
-                responseError.setUserMessage("1 intentos");
+                responseError.setUserMessage("1 intento");
                 responseError.setStatus(401);
                 response.setIsValidUser(false);
                 return new ResponseEntity<>(responseError, HttpStatus.UNAUTHORIZED); // 1 intento
