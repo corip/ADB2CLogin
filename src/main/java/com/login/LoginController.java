@@ -70,14 +70,14 @@ public class LoginController {
                 response.setIsValidUser(false);
                 responseError.setVersion("1.0.0");
                 responseError.setStatus(400);
-                responseError.setUserMessage("status:error,type:two_tries"); // 2 intentos
+                responseError.setUserMessage("status:error,type:has_two_attemps"); // 2 intentos
                 responseError.setCount(2);
 
 
 
             }else if(username.equals("pepe")) {
                 responseError.setVersion("1.0.0");
-                responseError.setUserMessage("status:error,type:one_try");// 1 intento
+                responseError.setUserMessage("status:error,type:has_one_attemp");// 1 intento
                 responseError.setStatus(401);
                 response.setIsValidUser(false);
 
