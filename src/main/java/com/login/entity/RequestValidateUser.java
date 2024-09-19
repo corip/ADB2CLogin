@@ -5,7 +5,7 @@ public class RequestValidateUser {
     private String signInName;
     private String password;
 
-    private String email;
+    private String userCredentialId;
 
 
 
@@ -26,13 +26,11 @@ public class RequestValidateUser {
         this.password = password;
     }
 
-    public String getEmail() {
-        return email;
+    public String getUserCredentialId() {
+        return userCredentialId;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setUserCredentialId(String userCredentialId) {
+        this.userCredentialId = userCredentialId;
     }
-
-
 }
