@@ -74,7 +74,7 @@ public class ResponseValidateUser {
         this.role = role;
     }
 
-    public boolean isFirstLogin() {
+    public boolean getIsFirstLogin() {
         return isFirstLogin;
     }
 
