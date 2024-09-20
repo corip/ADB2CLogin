@@ -45,7 +45,7 @@ public class LoginController {
     private ResponseEntity validateUser(@RequestBody RequestValidateUser request){
         ResponseValidateUser response= new ResponseValidateUser();
         ResponseError responseError = new ResponseError();
-        List<String> usersLs = Arrays.asList("vsantino","pepe","user1","ecordero");
+        List<String> usersLs = Arrays.asList("vsantino","pepe","user1","ecordero","VSANTINO");
         String username= request.getUserCredentialId();
         String password =  request.getPassword();
 
