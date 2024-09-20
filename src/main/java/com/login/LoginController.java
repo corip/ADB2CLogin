@@ -61,6 +61,7 @@ public class LoginController {
             response.setObjectId("12345");
             response.setRole("firmante");
             response.setFirstLogin("0");
+            response.setUserCredentialId(username);
             if(username.equals("ecordero")){
                 response.setFirstLogin("1");
             }

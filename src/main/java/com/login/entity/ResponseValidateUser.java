@@ -16,6 +16,8 @@ public class ResponseValidateUser {
 
     private String firstLogin;
 
+    private String userCredentialId;
+
     public boolean getIsValidUser() {
         return isValidUser;
     }
@@ -78,5 +80,13 @@ public class ResponseValidateUser {
 
     public void setFirstLogin(String firstLogin) {
         this.firstLogin = firstLogin;
+    }
+
+    public String getUserCredentialId() {
+        return userCredentialId;
+    }
+
+    public void setUserCredentialId(String userCredentialId) {
+        this.userCredentialId = userCredentialId;
     }
 }
