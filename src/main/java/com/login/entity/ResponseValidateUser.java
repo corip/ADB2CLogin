@@ -14,7 +14,7 @@ public class ResponseValidateUser {
 
     private String objectId;
 
-    private String firstLogin;
+    private boolean isFirstLogin;
 
     private String userCredentialId;
 
@@ -74,12 +74,12 @@ public class ResponseValidateUser {
         this.role = role;
     }
 
-    public String getFirstLogin() {
-        return firstLogin;
+    public boolean isFirstLogin() {
+        return isFirstLogin;
     }
 
-    public void setFirstLogin(String firstLogin) {
-        this.firstLogin = firstLogin;
+    public void setFirstLogin(boolean firstLogin) {
+        isFirstLogin = firstLogin;
     }
 
     public String getUserCredentialId() {
