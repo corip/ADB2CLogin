@@ -54,10 +54,10 @@ public class LoginController {
         if(usersLs.contains(username) && password.equals("1234")){
 
             response.setIsValidUser(true);
-            response.setFirstLogin(false);
+            response.setIsFirstLogin(false);
             response.setUserCredentialId(username);
             if(username.equals("ecordero")){
-                response.setFirstLogin(true);
+                response.setIsFirstLogin(true);
             }
             return new ResponseEntity<>(response, HttpStatus.OK);
         }else{

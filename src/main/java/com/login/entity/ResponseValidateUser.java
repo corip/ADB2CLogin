@@ -78,7 +78,7 @@ public class ResponseValidateUser {
         return isFirstLogin;
     }
 
-    public void setFirstLogin(boolean firstLogin) {
+    public void setIsFirstLogin(boolean firstLogin) {
         isFirstLogin = firstLogin;
     }
 
