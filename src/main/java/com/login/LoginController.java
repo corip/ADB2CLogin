@@ -59,7 +59,6 @@ public class LoginController {
             if(username.equals("ecordero")){
                 response.setIsFirstLogin(true);
             }
-            response.setJti("prueba-jti");
             return new ResponseEntity<>(response, HttpStatus.OK);
         }else{
             if(username.equals("vsantino")){
