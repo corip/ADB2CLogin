@@ -9,6 +9,7 @@ public class ResponseValidateUser {
     private String givenName;
     private String surname;
     private String role;
+    private String jti;
 
     private String userPrincipalName;
 
@@ -88,5 +89,13 @@ public class ResponseValidateUser {
 
     public void setUserCredentialId(String userCredentialId) {
         this.userCredentialId = userCredentialId;
+    }
+
+    public String getJti() {
+        return jti;
+    }
+
+    public void setJti(String jti) {
+        this.jti = jti;
     }
 }

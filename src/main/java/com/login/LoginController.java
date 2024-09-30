@@ -56,6 +56,7 @@ public class LoginController {
             response.setIsValidUser(true);
             response.setIsFirstLogin(false);
             response.setUserCredentialId(username);
+            response.setJti("prueba-jti");
             if(username.equals("ecordero")){
                 response.setIsFirstLogin(true);
             }
