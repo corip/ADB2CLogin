@@ -19,6 +19,15 @@ public class LoginController {
 
     private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
 
+
+    @PostMapping("/cache")
+    private ResponseEntity cache(@RequestBody Request request) {
+        Response response = new Response();
+        response.setPromoCode("cache");
+        logger.info("Llamada a API cache");
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+
     @PostMapping("/login")
     private ResponseEntity login(@RequestBody Request request){
         Response response = new Response();
