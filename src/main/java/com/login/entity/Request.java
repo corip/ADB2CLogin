@@ -5,6 +5,7 @@ public class Request {
     private String email;
     private String password;
     private String userCredentialId;
+    private String jti;
 
     public String getEmail() {
         return email;
@@ -28,5 +29,13 @@ public class Request {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getJti() {
+        return jti;
+    }
+
+    public void setJti(String jti) {
+        this.jti = jti;
     }
 }

@@ -25,6 +25,8 @@ public class LoginController {
         Response response = new Response();
         response.setPromoCode("cache");
         logger.info("Llamada a API cache");
+        String jti= request.getJti();
+        logger.info("JTI: "+jti);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
