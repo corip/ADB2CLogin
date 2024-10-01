@@ -7,6 +7,9 @@ public class Request {
     private String userCredentialId;
     private String jti;
 
+    private String objectId;
+
+
     public String getEmail() {
         return email;
     }
@@ -37,5 +40,13 @@ public class Request {
 
     public void setJti(String jti) {
         this.jti = jti;
+    }
+
+    public String getObjectId() {
+        return objectId;
+    }
+
+    public void setObjectId(String objectId) {
+        this.objectId = objectId;
     }
 }

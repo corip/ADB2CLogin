@@ -30,6 +30,16 @@ public class LoginController {
             logger.info("JTI: "+jti);
         }
 
+        if(request.getUserCredentialId()!=null){
+            String jti= request.getJti();
+            logger.info("userCrendentialId: "+request.getUserCredentialId());
+        }
+
+        if(request.getObjectId()!=null){
+            String jti= request.getJti();
+            logger.info("objectId: "+request.getObjectId());
+        }
+
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
