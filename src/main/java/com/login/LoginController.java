@@ -69,24 +69,21 @@ public class LoginController {
     private ResponseEntity validateUser(@RequestBody RequestValidateUser request){
         ResponseValidateUser response= new ResponseValidateUser();
         ResponseError responseError = new ResponseError();
-        List<String> usersLs = Arrays.asList("vsantino","pepe","user1","ecordero","VSANTINO");
+        List<String> usersLs = Arrays.asList("pepe","juan","pedro");
         String username= request.getUserCredentialId();
         String password =  request.getPassword();
 
-        logger.debug("/validateUser");
-        logger.debug(request.toString());
         if(usersLs.contains(username) && password.equals("1234")){
 
             response.setIsValidUser(true);
             response.setIsFirstLogin(false);
             response.setUserCredentialId(username);
-            response.setJti("prueba-jti");
-            if(username.equals("ecordero")){
+            if(username.equals("pepe")){
                 response.setIsFirstLogin(true);
             }
             return new ResponseEntity<>(response, HttpStatus.OK);
         }else{
-            if(username.equals("vsantino")){
+            if(username.equals("lorenzo")){
                 response.setIsValidUser(false);
                 responseError.setVersion("1.0.0");
                 responseError.setStatus(400);
